@@ -150,6 +150,14 @@ function createGameDetailDropdown(property, value) {
 
 }
 
+// Function to remove all elements with the class 'game-detail-dropdown'
+function removeAllDropdowns() {
+  const dropdowns = document.querySelectorAll('.game-detail-dropdown');
+  dropdowns.forEach(dropdown => {
+    dropdown.remove();
+  });
+}
+
 // Fetching game details by Universe ID
 async function fetchGameDetails(universeId) {
   try {
@@ -309,6 +317,8 @@ placeIdInput.addEventListener('focus', function() {
   this.style.transition = 'width 0.3s, height 0.3s';
   this.style.width = '370px';
   this.style.height = '40px';
+  console.log("Focus")
+  removeAllDropdowns();
 });
 
 placeIdInput.addEventListener('blur', async function() {
