@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoInfo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1 class="roinfo-text">RoInfo</h1>
+    <input type="text" class="textbox" id="placeIdInput" placeholder="Place ID">
+  </div>
+
+  <div class="most-tracked-games">
+    <h2>Top 3 Most Tracked Games</h2>
+    <ul id="mostTrackedGames"></ul>
+  </div>
+  <div class="thumbnail-container">
+  <img id="thumbnailImage" src="./Resources/Invisible.png" alt="Thumbnail" style="border-radius: 8px; width: 200px; height: auto;">
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="textbox-container">
+        <div id="placeIdResult" class="placeIdResult">
+          <!-- Place ID and API results will be displayed here -->
+          <div id="resultContainer">
+            <!-- Other content or elements -->
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ section -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <div class="faq-item">
+      <h3>Do we store data ?</h3>
+      <p>Yes, we do, but we only store the Place ID that you entered in the textbox.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this website free ?</h3>
+      <p>Yes, this website is completly free.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you collect my data ?</h3>
+      <p>No, we don't collect your data.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does it work ?</h3>
+      <p>It's kinda simple! We convert the Place ID you entered into a universe id and we send a request to the Roblox's API endpoint with the universe id and get the JSON data.</p>
+    </div>
+    <!-- Add more FAQ items as needed -->
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
